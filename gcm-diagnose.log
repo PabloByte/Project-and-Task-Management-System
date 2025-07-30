@@ -1,0 +1,224 @@
+﻿Diagnose log at 2025-07-30T20:19:38Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.6.1+786ab03440ddc82e807a97c0e540f5247e44cec6
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 26100)
+Reading environment variables... OK
+ Variables:
+HOMEPATH=\Users\PC
+DriverData=C:\Windows\System32\Drivers\DriverData
+COMPUTERNAME=DESKTOP-TK2PVIK
+MSYSTEM=MINGW64
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+WINDIR=C:\WINDOWS
+LANG=en_US.UTF-8
+SSH_ASKPASS=C:/Program Files/Git/mingw64/bin/git-askpass.exe
+EFC_69292_2283032206=1
+TMPDIR=C:\Users\PC\AppData\Local\Temp
+ProgramFiles(x86)=C:\Program Files (x86)
+TMP=C:\Users\PC\AppData\Local\Temp
+CONFIG_SITE=C:/Program Files/Git/etc/config.site
+PROCESSOR_REVISION=bf02
+USERDOMAIN=DESKTOP-TK2PVIK
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+MSYSTEM_PREFIX=C:/Program Files/Git/mingw64
+USERNAME=PC
+MINGW_PREFIX=C:/Program Files/Git/mingw64
+GIT_ASKPASS=c:\Users\PC\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+ACLOCAL_PATH=C:\Program Files\Git\mingw64\share\aclocal;C:\Program Files\Git\usr\share\aclocal
+TEMP=C:\Users\PC\AppData\Local\Temp
+LOCALAPPDATA=C:\Users\PC\AppData\Local
+MANPATH=C:\Program Files\Git\mingw64\local\man;C:\Program Files\Git\mingw64\share\man;C:\Program Files\Git\usr\local\man;C:\Program Files\Git\usr\share\man;C:\Program Files\Git\usr\man;C:\Program Files\Git\share\man
+OneDrive=C:\Users\PC\OneDrive
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 191 Stepping 2, GenuineIntel
+MSYSTEM_CARCH=x86_64
+PROGRAMFILES=C:\Program Files (x86)
+ProgramData=C:\ProgramData
+JAVA_HOME=C:\Program Files\Java\jdk-23
+TERM_PROGRAM_VERSION=1.102.3
+ORIGINAL_TMP=C:/Users/PC/AppData/Local/Temp
+SYSTEMROOT=C:\WINDOWS
+EFC_69292_1262719628=1
+TERM_PROGRAM=vscode
+PROCESSOR_LEVEL=6
+NUMBER_OF_PROCESSORS=16
+PATH=C:/Program Files/Git/mingw64/libexec/git-core;C:\Users\PC\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\PC\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;%M2_HOME%\bin;C:\Program Files\Java\jdk-23\bin;C:\Users\PC\Desktop\Sofware\apache-maven-3.9.9\bin;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Users\PC\AppData\Local\Microsoft\WindowsApps;C:\Users\PC\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk-23\bin;C:\Users\PC\.lmstudio\bin;C:\Users\PC\AppData\Local\Microsoft\WindowsApps;C:\Users\PC\AppData\Roaming\npm;C:\Users\PC\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+SHLVL=1
+APPDATA=C:\Users\PC\AppData\Roaming
+SYSTEMDRIVE=C:
+VSCODE_GIT_ASKPASS_MAIN=c:\Users\PC\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js
+PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+VSCODE_GIT_IPC_HANDLE=\\.\pipe\vscode-git-800de6259a-sock
+FPS_BROWSER_USER_PROFILE_STRING=Default
+PKG_CONFIG_PATH=C:\Program Files\Git\mingw64\lib\pkgconfig;C:\Program Files\Git\mingw64\share\pkgconfig
+EFC_69292_1592913036=1
+ORIGINAL_TEMP=C:/Users/PC/AppData/Local/Temp
+CHROME_CRASHPAD_PIPE_NAME=\\.\pipe\crashpad_150708_OULILTEMVJNDGVFI
+PLINK_PROTOCOL=ssh
+COLORTERM=truecolor
+ProgramW6432=C:\Program Files
+ACSvcPort=17532
+MINGW_CHOST=x86_64-w64-mingw32
+GIT_TRACE2_PARENT_SID=d20f5179-3152-43a1-9776-675ebd8ae423
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+PKG_CONFIG_SYSTEM_LIBRARY_PATH=C:/Program Files/Git/mingw64/lib
+ORIGINAL_PATH=C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\PC\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;%M2_HOME%\bin;C:\Program Files\Java\jdk-23\bin;C:\Users\PC\Desktop\Sofware\apache-maven-3.9.9\bin;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Users\PC\AppData\Local\Microsoft\WindowsApps;C:\Users\PC\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk-23\bin;C:\Users\PC\.lmstudio\bin;C:\Users\PC\AppData\Local\Microsoft\WindowsApps;C:\Users\PC\AppData\Roaming\npm;C:\Users\PC\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand
+RlsSvcPort=22112
+TERM=xterm-256color
+ORIGINAL_XDG_CURRENT_DESKTOP=undefined
+SHELL=C:\Program Files\Git\usr\bin\bash.exe
+HOME=C:\Users\PC
+MSYSTEM_CHOST=x86_64-w64-mingw32
+COMSPEC=C:\WINDOWS\system32\cmd.exe
+ZES_ENABLE_SYSMAN=1
+LOGONSERVER=\\DESKTOP-TK2PVIK
+USERPROFILE=C:\Users\PC
+DISPLAY=needs-to-be-defined
+COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+VSCODE_GIT_ASKPASS_NODE=C:\Users\PC\AppData\Local\Programs\Microsoft VS Code\Code.exe
+_=C:/Program Files/Git/mingw64/bin/git
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-TK2PVIK
+EFC_69292_3789132940=1
+HOMEDRIVE=C:
+INFOPATH=C:\Program Files\Git\mingw64\local\info;C:\Program Files\Git\mingw64\share\info;C:\Program Files\Git\usr\local\info;C:\Program Files\Git\usr\share\info;C:\Program Files\Git\usr\info;C:\Program Files\Git\share\info
+ACSetupSvcPort=23210
+MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+CommonProgramW6432=C:\Program Files\Common Files
+SESSIONNAME=Console
+PWD=C:/Users/PC/Desktop/beforesecurity
+EXEPATH=C:\Program Files\Git\bin
+HOSTNAME=DESKTOP-TK2PVIK
+PROCESSOR_ARCHITEW6432=AMD64
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+PROCESSOR_ARCHITECTURE=x86
+PS1=\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ 
+OS=Windows_NT
+MAVEN_HOME=C:\Users\PC\Desktop\Sofware\apache-maven-3.9.9
+PKG_CONFIG_SYSTEM_INCLUDE_PATH=C:/Program Files/Git/mingw64/include
+EFC_69292_2775293581=1
+ALLUSERSPROFILE=C:\ProgramData
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\PC\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\PC\AppData\Local\Temp\f5554f069e17fce10c9795f3'... OK
+Reading from temporary file 'C:\Users\PC\AppData\Local\Temp\f5554f069e17fce10c9795f3'... OK
+Deleting temporary file 'C:\Users\PC\AppData\Local\Temp\f5554f069e17fce10c9795f3'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\PC
+UserDataDirectoryPath: C:\Users\PC\.gcm
+GetCurrentDirectory(): C:\Users\PC\Desktop\beforesecurity
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:59410/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.50.1.windows.1'
+Locating current repository...Git repository at 'C:/Users/PC/Desktop/beforesecurity/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=schannel
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:C:/Users/PC/.gitconfig	user.name=Pablo Rolong
+file:C:/Users/PC/.gitconfig	user.email=pablo.dev993@hotmail.com
+file:C:/Users/PC/.gitconfig	core.editor=code --wait
+file:C:/Users/PC/.gitconfig	core.autocrlf=true
+file:C:/Users/PC/.gitconfig	credential.helper=manager-core
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/PabloByte/practicebeforesecurity.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.master.remote=origin
+file:.git/config	branch.master.merge=refs/heads/main
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\PC\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\PC\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
