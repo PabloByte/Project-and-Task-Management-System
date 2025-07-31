@@ -12,7 +12,7 @@ public interface TodoListMapper {
 
   CollaboratorDtoReturn collaboratorToCollaboratorDtoReturn (Collaborator collaborator);
 
-
+// debo crear un dto para las caracteristicas complejas del entity collaborator , que tienen set y list
 
 
 
