@@ -20,8 +20,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@Setter
-@Getter
+
+
 @Entity
 public class Project {
 
@@ -33,6 +33,7 @@ public class Project {
   private String name;
 
   private String description;
+  
   @Enumerated(EnumType.STRING)
   private Status status;
 
@@ -63,6 +64,72 @@ public class Project {
     this.metadata = metadata;
     
   }
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public Status getStatus() {
+    return status;
+  }
+
+  public void setStatus(Status status) {
+    this.status = status;
+  }
+
+  public LocalDate getCreationDate() {
+    return creationDate;
+  }
+
+  public void setCreationDate(LocalDate creationDate) {
+    this.creationDate = creationDate;
+  }
+
+  public AuditData getMetadata() {
+    return metadata;
+  }
+
+  public void setMetadata(AuditData metadata) {
+    this.metadata = metadata;
+  }
+
+  public List<Task> getTasks() {
+    return tasks;
+  }
+
+  public void setTasks(List<Task> tasks) {
+    this.tasks = tasks;
+  }
+
+  public Set<Collaborator> getColaboradores() {
+    return colaboradores;
+  }
+
+  public void setColaboradores(Set<Collaborator> colaboradores) {
+    this.colaboradores = colaboradores;
+  }
+
+  
 
    
 

@@ -1,5 +1,7 @@
 package com.beforesecurity.beforesecurity.dto;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -41,6 +43,9 @@ public class CollaboratorDtoReturn {
 
 
   public CollaboratorDtoReturn() {
+
+    tareas = new ArrayList<>();
+    proyectos = new HashSet<>();
   }
 
 
