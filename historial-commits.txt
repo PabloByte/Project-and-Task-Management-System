@@ -1,0 +1,54 @@
+commit aa11ea86958608af2febe6fc71d4e383b341bcee
+Author: Pablo Rolong <pablo.dev993@hotmail.com>
+Date:   Thu Jul 31 19:46:45 2025 -0500
+
+    add dtos to create collaborator service and controller endpoint create, add mapper, verify and everything is working with the database
+
+commit 9a780baac685035ad9de5cbe9f87fd00acceaec2
+Author: Pablo Rolong <pablo-993@hotmail.com>
+Date:   Thu Jul 31 12:04:56 2025 -0500
+
+    add dto to atribtes more complicates
+
+commit 5541f5cd0ea3d4c372cad99a152955dd86669125
+Author: Pablo Rolong <pablo.dev993@hotmail.com>
+Date:   Thu Jul 31 12:00:49 2025 -0500
+
+    agregue dto, mapper, en proceso de crear el save de collaborator class, debo crear dtos para atributos completos con set y list
+
+commit 6a7e7298762628e5c5a19e6ba9aceeac32887b2c
+Author: Pablo Rolong <pablo.dev993@hotmail.com>
+Date:   Wed Jul 30 16:21:31 2025 -0500
+
+    add the repositoryes for the entitys and update logger level
+
+commit ad51a511d8e28d0cfe2534c2034b6d87c575fe1a
+Author: Pablo Rolong <pablo.dev993@hotmail.com>
+Date:   Wed Jul 30 16:05:01 2025 -0500
+
+    Actualizo .gitignore para ignorar archivo de diagnóstico
+
+commit c7bedc04a09a7989caf1fbb7a17c36882d0c0916
+Author: Pablo Rolong <pablo-993@hotmail.com>
+Date:   Wed Jul 30 15:40:03 2025 -0500
+
+    commet from remote
+
+commit f44e267d552234c93576f366b44108b5bef6872b
+Merge: 6553eaf 07dae02
+Author: Pablo Rolong <pablo.dev993@hotmail.com>
+Date:   Wed Jul 30 14:43:41 2025 -0500
+
+    Merge branch 'main' of https://github.com/PabloByte/practicebeforesecurity
+
+commit 07dae0260020baf23e0576001adf31b90d18e687
+Author: Pablo Rolong <pablo-993@hotmail.com>
+Date:   Wed Jul 30 13:59:48 2025 -0500
+
+    Initial commit
+
+commit 6553eafddbced7216960ee86486178e8c0afcbd3
+Author: Pablo Rolong <pablo.dev993@hotmail.com>
+Date:   Wed Jul 30 13:54:00 2025 -0500
+
+    i have started the developing of the project to practic before aws security, creatig tables relations, entitys and propertyes configurations
