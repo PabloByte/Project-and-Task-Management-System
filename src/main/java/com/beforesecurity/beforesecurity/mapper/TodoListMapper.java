@@ -19,6 +19,7 @@ public interface TodoListMapper {
 
 
   CollaboratorDtoReturn collaboratorToCollaboratorDtoReturn (Collaborator collaborator);
+  List<CollaboratorDtoReturn> collaboratorListToCollaboratorDtoReturnsList (List<Collaborator> list);
 
 
 
