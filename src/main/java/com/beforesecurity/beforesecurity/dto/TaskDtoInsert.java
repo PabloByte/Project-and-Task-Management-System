@@ -2,33 +2,23 @@ package com.beforesecurity.beforesecurity.dto;
 
 import java.time.LocalDate;
 
-public class TaskDto {
 
-
-private Long id;
+public class TaskDtoInsert {
 
 private String title;
 
 private String description;
 
-
 private  String priority;
 
 private LocalDate dueDate;
 
-private String project;
+private Long project;
 
-private String colaborador;
+private Long colaborador;
 
-
-
-
-
-
-
-public TaskDto(Long id, String title, String description, String priority, LocalDate dueDate, String project,
-    String colaborador) {
-  this.id = id;
+public TaskDtoInsert(String title, String description, String priority, LocalDate dueDate, Long project,
+    Long colaborador) {
   this.title = title;
   this.description = description;
   this.priority = priority;
@@ -37,19 +27,7 @@ public TaskDto(Long id, String title, String description, String priority, Local
   this.colaborador = colaborador;
 }
 
-
-
-public TaskDto() {
-}
-
-
-
-public Long getId() {
-  return id;
-}
-
-public void setId(Long id) {
-  this.id = id;
+public TaskDtoInsert() {
 }
 
 public String getTitle() {
@@ -84,27 +62,19 @@ public void setDueDate(LocalDate dueDate) {
   this.dueDate = dueDate;
 }
 
-
-
-public String getProject() {
+public Long getProject() {
   return project;
 }
 
-
-
-public void setProject(String project) {
+public void setProject(Long project) {
   this.project = project;
 }
 
-
-
-public String getColaborador() {
+public Long getColaborador() {
   return colaborador;
 }
 
-
-
-public void setColaborador(String colaborador) {
+public void setColaborador(Long colaborador) {
   this.colaborador = colaborador;
 }
 

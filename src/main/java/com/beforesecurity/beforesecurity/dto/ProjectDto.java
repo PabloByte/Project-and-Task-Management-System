@@ -1,6 +1,7 @@
 package com.beforesecurity.beforesecurity.dto;
 
 import java.time.LocalDate;
+import java.util.List;
 
 
 
@@ -17,16 +18,25 @@ public class ProjectDto {
 
   private LocalDate creationDate;
 
+  private List<TaskDto> tasks;
+
+  private List<CollaboratorDtoReturn> colaboradores ;
+
   public ProjectDto() {
   }
 
-  public ProjectDto(Long id, String name, String description, String status, LocalDate creationDate) {
+
+  public ProjectDto(Long id, String name, String description, String status, LocalDate creationDate,
+      List<TaskDto> tasks, List<CollaboratorDtoReturn> colaboradores) {
     this.id = id;
     this.name = name;
     this.description = description;
     this.status = status;
     this.creationDate = creationDate;
+    this.tasks = tasks;
+    this.colaboradores = colaboradores;
   }
+
 
   public Long getId() {
     return id;
@@ -66,6 +76,26 @@ public class ProjectDto {
 
   public void setCreationDate(LocalDate creationDate) {
     this.creationDate = creationDate;
+  }
+
+
+  public List<TaskDto> getTasks() {
+    return tasks;
+  }
+
+
+  public void setTasks(List<TaskDto> tasks) {
+    this.tasks = tasks;
+  }
+
+
+  public List<CollaboratorDtoReturn> getColaboradores() {
+    return colaboradores;
+  }
+
+
+  public void setColaboradores(List<CollaboratorDtoReturn> colaboradores) {
+    this.colaboradores = colaboradores;
   }
 
   

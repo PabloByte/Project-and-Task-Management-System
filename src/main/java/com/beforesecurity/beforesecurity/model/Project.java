@@ -16,8 +16,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
-import lombok.Getter;
-import lombok.Setter;
+
 
 
 
@@ -129,6 +128,10 @@ public class Project {
     this.colaboradores = colaboradores;
   }
 
+
+public void addTask (Task task){
+  tasks.add(task);
+}
   
 
    

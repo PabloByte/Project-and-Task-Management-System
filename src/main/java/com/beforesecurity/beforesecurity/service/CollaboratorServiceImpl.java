@@ -82,17 +82,13 @@ public class CollaboratorServiceImpl implements ICollaboratorService {
   @Override
   public CollaboratorDtoReturn updateCollaborator(Long id, CollaboratorDtoInsert collaboratorDto) {
 
-
-       // 1. Buscar el colaborador existente
     Collaborator existingCollaborator = collaboratorRepository.findById(id)
         .orElseThrow(() -> new EntityNotFoundException("Colaborador con id " + id + " no encontrado"));
-
-    // 2. Actualizar campos simples
     existingCollaborator.setFullName(collaboratorDto.getFullName());
     existingCollaborator.setEmail(collaboratorDto.getEmail());
     existingCollaborator.setPosition(collaboratorDto.getPosition());
 
-    // 3. Actualizar metadata (updatedAt, updatedBy)
+
     AuditData audit = existingCollaborator.getMetadata();
     if (audit == null) {
         audit = new AuditData();
@@ -102,13 +98,10 @@ public class CollaboratorServiceImpl implements ICollaboratorService {
 
     existingCollaborator.setMetadata(audit);
 
-    // 4. Guardar cambios
+  
     collaboratorRepository.save(existingCollaborator);
 
-    // 5. Devolver DTO actualizado
     return todoListMapper.collaboratorToCollaboratorDtoReturn(existingCollaborator);
-
-
   }
 
 
