@@ -5,6 +5,7 @@ import java.util.Set;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 
 import com.beforesecurity.beforesecurity.dto.CollaboratorDtoReturn;
 import com.beforesecurity.beforesecurity.dto.ProjectDto;
@@ -32,7 +33,15 @@ public interface TodoListMapper {
 
 
   @Mapping(source= "priority", target="priority")
+  @Mapping(source= "project.name", target="project")
+  @Mapping(source= "colaborador.fullName", target="colaborador")
   TaskDto toTaskDto (Task task);
+
+ 
+
+
+
+
   List<TaskDto> listTaskToListTaskDtos (List<Task> tasks);
 
 

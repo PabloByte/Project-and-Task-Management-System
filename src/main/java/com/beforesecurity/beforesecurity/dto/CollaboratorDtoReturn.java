@@ -19,18 +19,12 @@ public class CollaboratorDtoReturn {
 
   private String position;
 
-
-   
-  private Set<Project> proyectos ;
-
-  
-  private List<Task> tareas ;
-
-  
+  private Set<ProjectDto> proyectos ;  
+  private List<TaskDto> tareas ;
 
 
-  public CollaboratorDtoReturn(Long id, String fullName, String email, String position, Set<Project> proyectos,
-      List<Task> tareas) {
+  public CollaboratorDtoReturn(Long id, String fullName, String email, String position, Set<ProjectDto> proyectos,
+      List<TaskDto> tareas) {
     this.id = id;
     this.fullName = fullName;
     this.email = email;
@@ -107,30 +101,34 @@ public class CollaboratorDtoReturn {
 
 
 
-  public Set<Project> getProyectos() {
+  public Set<ProjectDto> getProyectos() {
     return proyectos;
   }
 
 
 
 
-  public void setProyectos(Set<Project> proyectos) {
+  public void setProyectos(Set<ProjectDto> proyectos) {
     this.proyectos = proyectos;
   }
 
 
 
 
-  public List<Task> getTareas() {
+  public List<TaskDto> getTareas() {
     return tareas;
   }
 
 
 
 
-  public void setTareas(List<Task> tareas) {
+  public void setTareas(List<TaskDto> tareas) {
     this.tareas = tareas;
   }
+
+
+
+
 
 
 

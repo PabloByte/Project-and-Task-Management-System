@@ -128,6 +128,10 @@ public class Project {
     this.colaboradores = colaboradores;
   }
 
+
+public void addTask (Task task){
+  tasks.add(task);
+}
   
 
    

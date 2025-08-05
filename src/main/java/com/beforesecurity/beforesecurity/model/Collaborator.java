@@ -111,7 +111,9 @@ public class Collaborator {
   }
 
   
-
+  public void addTask (Task task){
+    tareas.add(task);
+  }
   
 
 
