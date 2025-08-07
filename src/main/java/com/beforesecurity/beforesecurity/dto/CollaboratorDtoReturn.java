@@ -129,6 +129,15 @@ public class CollaboratorDtoReturn {
 
 
 
+  @Override
+  public String toString() {
+    return "CollaboratorDtoReturn [id=" + id + ", fullName=" + fullName + ", email=" + email + ", position=" + position
+        + ", proyectos=" + proyectos + ", tareas=" + tareas + "]";
+  }
+
+
+
+
 
 
 

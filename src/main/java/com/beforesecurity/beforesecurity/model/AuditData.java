@@ -57,6 +57,12 @@ public class AuditData {
     this.updatedBy = updatedBy;
   }
 
+  @Override
+  public String toString() {
+    return "AuditData [createdAt=" + createdAt + ", updatedAt=" + updatedAt + ", createdBy=" + createdBy
+        + ", updatedBy=" + updatedBy + "]";
+  }
+
   
 
 

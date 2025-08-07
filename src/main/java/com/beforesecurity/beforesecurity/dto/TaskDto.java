@@ -110,6 +110,14 @@ public void setColaborador(String colaborador) {
 
 
 
+@Override
+public String toString() {
+  return "TaskDto [id=" + id + ", title=" + title + ", description=" + description + ", priority=" + priority
+      + ", dueDate=" + dueDate + ", project=" + project + ", colaborador=" + colaborador + "]";
+}
+
+
+
 
 
 

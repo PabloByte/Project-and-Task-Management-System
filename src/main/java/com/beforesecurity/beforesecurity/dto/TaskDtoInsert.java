@@ -78,6 +78,12 @@ public void setColaborador(Long colaborador) {
   this.colaborador = colaborador;
 }
 
+@Override
+public String toString() {
+  return "TaskDtoInsert [title=" + title + ", description=" + description + ", priority=" + priority + ", dueDate="
+      + dueDate + ", project=" + project + ", colaborador=" + colaborador + "]";
+}
+
 
 
 

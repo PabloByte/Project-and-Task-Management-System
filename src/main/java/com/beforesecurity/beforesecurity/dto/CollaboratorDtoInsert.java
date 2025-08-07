@@ -43,6 +43,11 @@ public class CollaboratorDtoInsert {
     this.position = position;
   }
 
+  @Override
+  public String toString() {
+    return "CollaboratorDtoInsert [fullName=" + fullName + ", email=" + email + ", position=" + position + "]";
+  }
+
   
 
 

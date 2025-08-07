@@ -58,6 +58,12 @@ public class ProjectDtoInsert {
     this.creationDate = creationDate;
   }
 
+  @Override
+  public String toString() {
+    return "ProjectDtoInsert [name=" + name + ", description=" + description + ", status=" + status + ", creationDate="
+        + creationDate + "]";
+  }
+
   
 
  

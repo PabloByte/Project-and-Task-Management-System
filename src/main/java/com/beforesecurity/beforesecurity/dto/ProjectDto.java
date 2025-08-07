@@ -98,6 +98,13 @@ public class ProjectDto {
     this.colaboradores = colaboradores;
   }
 
+
+  @Override
+  public String toString() {
+    return "ProjectDto [id=" + id + ", name=" + name + ", description=" + description + ", status=" + status
+        + ", creationDate=" + creationDate + ", tasks=" + tasks + ", colaboradores=" + colaboradores + "]";
+  }
+
   
 
 

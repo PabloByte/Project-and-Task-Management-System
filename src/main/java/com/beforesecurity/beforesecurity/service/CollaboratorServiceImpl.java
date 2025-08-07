@@ -3,6 +3,8 @@ package com.beforesecurity.beforesecurity.service;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.beforesecurity.beforesecurity.dto.CollaboratorDtoInsert;
@@ -20,6 +22,8 @@ public class CollaboratorServiceImpl implements ICollaboratorService {
   private final CollaboratorRepository collaboratorRepository;
 
   private final TodoListMapper todoListMapper;
+
+  private static final Logger logger = LoggerFactory.getLogger(CollaboratorServiceImpl.class);
 
   public CollaboratorServiceImpl(CollaboratorRepository collaboratorRepository, TodoListMapper todoListMapper) {
     this.collaboratorRepository = collaboratorRepository;
@@ -43,6 +47,8 @@ public class CollaboratorServiceImpl implements ICollaboratorService {
 
     newCollaborator.setMetadata(auditoria);
 
+    logger.info("new collaborator created :\"{}\"",newCollaborator);
+
     collaboratorRepository.save(newCollaborator);
  
     return  todoListMapper.collaboratorToCollaboratorDtoReturn(newCollaborator);
@@ -60,8 +66,14 @@ public class CollaboratorServiceImpl implements ICollaboratorService {
   @Override
   public CollaboratorDtoReturn findById(Long id) {
 
-   Collaborator idFound  = collaboratorRepository.findById(id).orElseThrow(()-> new RuntimeException("No se encontro el id"));
+   Collaborator idFound  = collaboratorRepository.findById(id)
+   .orElseThrow(()-> { 
+    logger.info("not information found in the db about the id : \"{}\"",id);  
+    return new RuntimeException("No se encontro el id");   
+  });
 
+
+    logger.info("Collaborator found sucessfully : \"{}\"",id);
     return todoListMapper.collaboratorToCollaboratorDtoReturn(idFound);
   }
 

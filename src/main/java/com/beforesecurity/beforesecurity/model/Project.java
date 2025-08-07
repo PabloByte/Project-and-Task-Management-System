@@ -132,6 +132,13 @@ public class Project {
 public void addTask (Task task){
   tasks.add(task);
 }
+
+@Override
+public String toString() {
+  return "Project [id=" + id + ", name=" + name + ", description=" + description + ", status=" + status
+      + ", creationDate=" + creationDate + ", metadata=" + metadata + ", tasks=" + tasks + ", colaboradores="
+      + colaboradores + "]";
+}
   
 
    

@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.el.stream.Optional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.beforesecurity.beforesecurity.dto.ProjectDto;
@@ -21,6 +23,8 @@ import jakarta.persistence.EntityNotFoundException;
 @Service
 public class ProjectServiceImpl implements IProjectService {
 
+  private static final Logger logger = LoggerFactory.getLogger(ProjectServiceImpl.class);
+
   private final proyectrepository proyectrepository;
 
   private final TodoListMapper todoListMapper;
@@ -35,13 +39,14 @@ public class ProjectServiceImpl implements IProjectService {
   @Override
   public ProjectDto saveProject(ProjectDtoInsert project) {
 
+logger.info("starting creating project for: \"{}\"",project.getName());
+
     Project newProject = new Project();
 
     newProject.setName(project.getName());
     newProject.setDescription(project.getDescription());
     newProject.setStatus(Status.valueOf(project.getStatus()));
     newProject.setCreationDate(project.getCreationDate());
-
     AuditData auditoria = new AuditData();
 
     auditoria.setCreatedAt(LocalDateTime.now());
@@ -50,8 +55,13 @@ public class ProjectServiceImpl implements IProjectService {
     newProject.setMetadata(auditoria);
 
     proyectrepository.save(newProject);
+     logger.info("project create sucessfully: \"{}\"", newProject.getName());
 
     return todoListMapper.toDto(newProject);
+
+  
+
+   
 
   }
 
@@ -69,8 +79,15 @@ public class ProjectServiceImpl implements IProjectService {
 
   @Override
   public ProjectDto findById(Long id) {
-    Project projectFound = proyectrepository.findById(id).orElseThrow(()-> new RuntimeException("No se encontro el proyecto con el id "+ id));
 
+
+    Project projectFound = proyectrepository.findById(id)
+    .orElseThrow(()->{
+      logger.info("not information in the db about the project: \"{}\"", id);
+     return new RuntimeException("No se encontro el proyecto con el id "+ id);  });
+
+
+     logger.info("Project found , information : \"{}\"", projectFound.getName());
     return todoListMapper.toDto(projectFound);
     
   }

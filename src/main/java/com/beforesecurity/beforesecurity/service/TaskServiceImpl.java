@@ -3,6 +3,8 @@ package com.beforesecurity.beforesecurity.service;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.beforesecurity.beforesecurity.dto.TaskDto;
@@ -19,6 +21,8 @@ import com.beforesecurity.beforesecurity.repository.taskrepository;
 
 @Service
 public class TaskServiceImpl implements ITaskService {
+
+  private static final Logger logger  = LoggerFactory.getLogger(TaskServiceImpl.class); 
 
   private final taskrepository taskrepository;
   private final TodoListMapper convert;
@@ -75,7 +79,9 @@ public class TaskServiceImpl implements ITaskService {
       auditoria.setCreatedBy(task.getDescription());
 
       newTask.setMetadata(auditoria);
-    
+
+
+      logger.info("create new task, information task, project and collaborator added : \"{}\"", newTask.getDescription(), newTask.getProject(), newTask.getColaborador());
       taskrepository.save(newTask);
 
     return convert.toTaskDto(newTask);

@@ -114,6 +114,12 @@ public class Collaborator {
   public void addTask (Task task){
     tareas.add(task);
   }
+
+  @Override
+  public String toString() {
+    return "Collaborator [id=" + id + ", fullName=" + fullName + ", email=" + email + ", position=" + position
+        + ", metadata=" + metadata + ", proyectos=" + proyectos + ", tareas=" + tareas + "]";
+  }
   
 
 

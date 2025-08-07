@@ -118,6 +118,13 @@ public void setColaborador(Collaborator colaborador) {
   this.colaborador = colaborador;
 }
 
+@Override
+public String toString() {
+  return "Task [id=" + id + ", title=" + title + ", description=" + description + ", priority=" + priority
+      + ", dueDate=" + dueDate + ", metadata=" + metadata + ", project=" + project + ", colaborador=" + colaborador
+      + "]";
+}
+
 
 
 
