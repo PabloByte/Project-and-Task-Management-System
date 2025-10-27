@@ -36,12 +36,6 @@ public interface TodoListMapper {
   @Mapping(source= "project.name", target="project")
   @Mapping(source= "colaborador.fullName", target="colaborador")
   TaskDto toTaskDto (Task task);
-
- 
-
-
-
-
   List<TaskDto> listTaskToListTaskDtos (List<Task> tasks);
 
 

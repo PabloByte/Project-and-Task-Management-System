@@ -136,8 +136,7 @@ public void addTask (Task task){
 @Override
 public String toString() {
   return "Project [id=" + id + ", name=" + name + ", description=" + description + ", status=" + status
-      + ", creationDate=" + creationDate + ", metadata=" + metadata + ", tasks=" + tasks + ", colaboradores="
-      + colaboradores + "]";
+      + ", creationDate=" + creationDate + ", metadata=" + metadata +  "]";
 }
   
 

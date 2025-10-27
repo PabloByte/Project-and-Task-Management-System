@@ -1,5 +1,6 @@
 package com.beforesecurity.beforesecurity.service;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -28,20 +29,18 @@ public class TaskServiceImpl implements ITaskService {
   private final TodoListMapper convert;
   private final proyectrepository projectRepository;
   private final CollaboratorRepository collaboratorRepository;
+  private final FileStorageService fileStorageService;
 
  
-
-
   public TaskServiceImpl(com.beforesecurity.beforesecurity.repository.taskrepository taskrepository,
-      TodoListMapper convert, proyectrepository projectRepository, CollaboratorRepository collaboratorRepository) {
+      TodoListMapper convert, proyectrepository projectRepository, CollaboratorRepository collaboratorRepository,
+      FileStorageService fileStorageService) {
     this.taskrepository = taskrepository;
     this.convert = convert;
     this.projectRepository = projectRepository;
     this.collaboratorRepository = collaboratorRepository;
+    this.fileStorageService = fileStorageService;
   }
-
-
-
 
   Project validateProject (Long idProject){
     Project projectFound = projectRepository.findById(idProject).orElseThrow(()-> new RuntimeException("No se encontro el id del proyecto que se quiere asignar a la Task")); 
@@ -52,6 +51,15 @@ public class TaskServiceImpl implements ITaskService {
     Collaborator collaboratorFound = collaboratorRepository.findById(idCollaborator).orElseThrow(()-> new RuntimeException("No se encontro el colaborador con el id indicado para agregar a la Task"));
     return collaboratorFound;
   }
+
+
+  @Override  
+public Task getTaskById(Long id) {
+    return taskrepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Task no encontrada con id " + id));
+}
+
+
 
 
 
@@ -68,22 +76,32 @@ public class TaskServiceImpl implements ITaskService {
 
       Project projectAssignet = validateProject(task.getProject());
       newTask.setProject(projectAssignet);
-      projectAssignet.getTasks().add(newTask);
+   
 
       Collaborator collaboratorFound = validateCollaborator(task.getColaborador());
       newTask.setColaborador(collaboratorFound);
-      collaboratorFound.getTareas().add(newTask);
+   
 
       AuditData auditoria = new AuditData();
       auditoria.setCreatedAt(LocalDateTime.now());
       auditoria.setCreatedBy(task.getDescription());
-
       newTask.setMetadata(auditoria);
 
-
-      logger.info("create new task, information task, project and collaborator added : \"{}\"", newTask.getDescription(), newTask.getProject(), newTask.getColaborador());
       taskrepository.save(newTask);
 
+
+      try {
+        
+          String pdfPath = fileStorageService.saveTaskPdf(newTask);
+          newTask.setPdfPath(pdfPath);
+          taskrepository.save(newTask);
+         logger.info("create new task, information task, project and collaborator added : \"{}\"", newTask.getDescription(), newTask.getProject(), newTask.getColaborador());
+      
+        
+      } catch (IOException e) {
+        logger.error("Error generating PDF for Task {}", newTask.getId(), e);
+      }
+     
     return convert.toTaskDto(newTask);
   }
 

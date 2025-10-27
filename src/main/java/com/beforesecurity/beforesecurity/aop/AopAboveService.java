@@ -16,7 +16,7 @@ public class AopAboveService {
   private static final Logger logger = LoggerFactory.getLogger(AopAboveService.class);
 
   @Around("servicesPointcut.ServicesLoggersPointcut()")
-  public Object serviceAspect (ProceedingJoinPoint joinPoint){
+  public Object serviceAspect (ProceedingJoinPoint joinPoint) throws Throwable{
 
     String method = joinPoint.getSignature().getName();
     String args = Arrays.toString(joinPoint.getArgs());
@@ -36,8 +36,8 @@ public class AopAboveService {
       return  result;
     } catch (Throwable e) {
 
-      logger.info("error presented in the method, with the args : \"{}\"", method, args);
-      throw new RuntimeException("Error general presentado");
+     logger.error("ERROR REAL capturado en aspecto:", e); // <- imprime stacktrace real
+    throw e; // ! 
      
     }
 

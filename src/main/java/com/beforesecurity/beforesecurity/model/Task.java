@@ -39,12 +39,15 @@ private Project project;
 @ManyToOne 
 private Collaborator colaborador;
 
+private String pdfPath;
+
 public Task() {
 }
 
-public Task(Long id, String title, String description, Priority priority, LocalDate dueDate, AuditData metadata,
-    Project project, Collaborator colaborador) {
-  this.id = id;
+
+
+public Task(String title, String description, Priority priority, LocalDate dueDate, AuditData metadata, Project project,
+    Collaborator colaborador, String pdfPath) {
   this.title = title;
   this.description = description;
   this.priority = priority;
@@ -52,7 +55,10 @@ public Task(Long id, String title, String description, Priority priority, LocalD
   this.metadata = metadata;
   this.project = project;
   this.colaborador = colaborador;
+  this.pdfPath = pdfPath;
 }
+
+
 
 public Long getId() {
   return id;
@@ -121,8 +127,21 @@ public void setColaborador(Collaborator colaborador) {
 @Override
 public String toString() {
   return "Task [id=" + id + ", title=" + title + ", description=" + description + ", priority=" + priority
-      + ", dueDate=" + dueDate + ", metadata=" + metadata + ", project=" + project + ", colaborador=" + colaborador
-      + "]";
+      + ", dueDate=" + dueDate + ", metadata=" + metadata +
+'}';
+
+}
+
+
+
+public String getPdfPath() {
+  return pdfPath;
+}
+
+
+
+public void setPdfPath(String pdfPath) {
+  this.pdfPath = pdfPath;
 }
 
 

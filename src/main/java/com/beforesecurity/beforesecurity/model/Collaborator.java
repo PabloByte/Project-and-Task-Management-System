@@ -120,7 +120,7 @@ public class Collaborator {
   @Override
   public String toString() {
     return "Collaborator [id=" + id + ", fullName=" + fullName + ", email=" + email + ", position=" + position
-        + ", metadata=" + metadata + ", proyectos=" + proyectos + ", tareas=" + tareas + "]";
+        + ", metadata=" + metadata +  "]";
   }
   
 

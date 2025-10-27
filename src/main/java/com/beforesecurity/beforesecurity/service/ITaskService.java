@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.beforesecurity.beforesecurity.dto.TaskDto;
 import com.beforesecurity.beforesecurity.dto.TaskDtoInsert;
+import com.beforesecurity.beforesecurity.model.Task;
 
 public interface ITaskService {
 
@@ -17,6 +18,8 @@ public interface ITaskService {
   TaskDto updateId(Long id);
   
   void deleteTaskById (Long id);
+
+  public Task getTaskById(Long id);
 
 
 

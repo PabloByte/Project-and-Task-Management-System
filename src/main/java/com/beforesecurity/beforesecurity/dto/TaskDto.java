@@ -20,6 +20,10 @@ private String project;
 
 private String colaborador;
 
+private String pdfPath;
+
+
+
 
 
 
@@ -27,7 +31,7 @@ private String colaborador;
 
 
 public TaskDto(Long id, String title, String description, String priority, LocalDate dueDate, String project,
-    String colaborador) {
+    String colaborador, String pdfPath) {
   this.id = id;
   this.title = title;
   this.description = description;
@@ -35,6 +39,7 @@ public TaskDto(Long id, String title, String description, String priority, Local
   this.dueDate = dueDate;
   this.project = project;
   this.colaborador = colaborador;
+  this.pdfPath = pdfPath;
 }
 
 
@@ -114,6 +119,18 @@ public void setColaborador(String colaborador) {
 public String toString() {
   return "TaskDto [id=" + id + ", title=" + title + ", description=" + description + ", priority=" + priority
       + ", dueDate=" + dueDate + ", project=" + project + ", colaborador=" + colaborador + "]";
+}
+
+
+
+public String getPdfPath() {
+  return pdfPath;
+}
+
+
+
+public void setPdfPath(String pdfPath) {
+  this.pdfPath = pdfPath;
 }
 
 

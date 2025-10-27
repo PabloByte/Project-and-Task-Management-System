@@ -1,0 +1,97 @@
+/* Estilos generales */
+body.login-body {
+  font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #0a192f; /* Deep blue background fallback */
+    background-image: url('/images/world.svg'); /* World map background */
+    background-size: cover;
+    background-position: center;
+    color: #e6f1ff; /* Light text color */
+}
+
+body.login-body :hover {
+  /* Morado estilo ciberpunk */
+  box-shadow: 0 0 20px #e6f1ff;; /* Resplandor morado */
+  transform: scale(1.1); /* Ligeramente más grande */
+}
+
+
+/* Contenedor principal */
+.login-container {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+}
+
+/* Header */
+.login-header .emblem {
+  width: 110px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  border: 2px solid #f5f1f1;
+  transition: all 0.3s ease; /* Suaviza el efecto */
+}
+
+.login-header.emblem:hover {
+  border-color: #701ca1; /* Morado estilo ciberpunk */
+  box-shadow: 0 0 20px #09070a; /* Resplandor morado */
+  transform: scale(1.1); /* Ligeramente más grande */
+}
+
+.login-header h1 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.sub-header {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Formulario */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+}
+
+.login-btn {
+  background: #082b4e;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.login-btn:hover {
+  background: #4682b4;
+}
+
+/* Footer */
+.warning-footer {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #bbb;
+}
