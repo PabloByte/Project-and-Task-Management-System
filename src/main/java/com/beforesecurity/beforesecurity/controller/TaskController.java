@@ -12,6 +12,9 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,7 +28,6 @@ import com.beforesecurity.beforesecurity.model.Task;
 import com.beforesecurity.beforesecurity.service.TaskServiceImpl;
 
 
-
 @RestController
 @RequestMapping("/task")
 public class TaskController {
@@ -36,7 +38,7 @@ public class TaskController {
     this.taskServiceImpl = taskServiceImpl;
   }
 
-
+  @PreAuthorize("hasAnyRole('USER','ADMINISTRATOR')")
   @PostMapping("/create")
   ResponseEntity<?> createTask (@RequestBody TaskDtoInsert task ){
 
@@ -54,6 +56,8 @@ public class TaskController {
 
   }
 
+
+  @PreAuthorize("hasAnyRole('USER','ADMINISTRATOR')")
   @GetMapping("/{id}/download")
 public ResponseEntity<ByteArrayResource> downloadPdf(@PathVariable Long id) throws IOException {
     Task task = taskServiceImpl.getTaskById(id); // Necesitas este método en el service

@@ -1,22 +1,38 @@
 HELP.md
+
+# Maven / build
 target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+!**/src/test/**/build/
 
-### STS ###
+# Logs
+logs/
+*.log
+
+# STS / Spring Tool Suite
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 
-
-!**/src/test/**/build/
-
-### VS Code ###
+# VS Code
 .vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local / misc
 gcm-diagnose.log
 historial-commits.txt
+.env
+.env.*

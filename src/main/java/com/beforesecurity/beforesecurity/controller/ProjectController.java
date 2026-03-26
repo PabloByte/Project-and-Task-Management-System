@@ -7,9 +7,12 @@ import java.util.Set;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -30,7 +33,6 @@ import jakarta.validation.Valid;
 
 
 
-
 @RestController
 @RequestMapping("/project")
 public class ProjectController {
@@ -45,7 +47,7 @@ public ProjectController(ProjectServiceImpl projectServiceImpl, ProjectValidatio
 }
 
 
-
+@PreAuthorize("hasRole('ADMINISTRATOR')")
 @PostMapping("/createProject")
 ResponseEntity<?> createProject (@RequestBody ProjectDtoInsert project, BindingResult result ){
 
@@ -62,6 +64,7 @@ ResponseEntity<?> createProject (@RequestBody ProjectDtoInsert project, BindingR
 
 }
 
+@PreAuthorize("hasAnyRole('USER','ADMINISTRATOR')")
 @GetMapping("/ShowAll")
 ResponseEntity<?> showAllProjects (){
 
@@ -71,7 +74,7 @@ ResponseEntity<?> showAllProjects (){
 
 }
 
-
+@PreAuthorize("hasAnyRole('USER','ADMINISTRATOR')")
 @GetMapping("/findById/{id}")
 ResponseEntity<?> findByID (@PathVariable Long id){
 
@@ -81,7 +84,7 @@ ResponseEntity<?> findByID (@PathVariable Long id){
 
 }
 
-
+@PreAuthorize("hasRole('ADMINISTRATOR')")
 @PutMapping("/update/{id}")
 ResponseEntity<?> updateProject (@PathVariable  Long id, @RequestBody ProjectDtoInsert project){
 
@@ -91,7 +94,7 @@ ResponseEntity<?> updateProject (@PathVariable  Long id, @RequestBody ProjectDto
   return ResponseEntity.status(HttpStatus.ACCEPTED).body(projectUpdate);
 }
 
-
+@PreAuthorize("hasRole('ADMINISTRATOR')")
 @DeleteMapping("/deleteProject/{id}")
 public ResponseEntity<?> deleteProject (@RequestParam Long id ){
 
